@@ -1,0 +1,93 @@
+/* General body styles for dark theme */
+body {
+    background-color: #1a1a1a; /* A very dark grey */
+    color: #e0e0e0; /* Light grey text for contrast */
+    font-family: sans-serif; /* A clean, readable font */
+    margin: 0; /* Remove default body margin */
+    padding: 0;
+}
+
+/* Styles for the introductory description section */
+.description-section {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px; /* Added padding for better spacing */
+    background-color: #2a2a2a; /* Slightly lighter background for the section */
+    border-bottom: 1px solid #333; /* Subtle separator */
+}
+
+.description-section h1 {
+    margin-top: 0; /* Remove top margin for the heading */
+    margin-bottom: 15px;
+    color: #ffffff; /* White for the main heading */
+    font-size: 2em; /* Larger font size for the main title */
+}
+
+.description-section p {
+    font-size: 1.05em;
+    line-height: 1.6;
+    color: #cccccc; /* Slightly lighter grey for paragraphs */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styles for the main gallery container */
+.gallery-container {
+    display: flex;          /* Use flexbox for layout */
+    flex-wrap: wrap;        /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
+    gap: 15px;              /* Space between gallery items */
+    padding: 20px;          /* Padding around the entire gallery */
+}
+
+/* Styles for each individual gallery item (image + name) */
+.gallery-item {
+    display: flex;          /* Use flexbox for the item itself */
+    flex-direction: column; /* Stack image and name vertically */
+    align-items: center;    /* Center image and name horizontally within the item */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    text-align: center;     /* Center the text */
+    padding: 10px;          /* Padding inside each item for spacing */
+    background-color: #2a2a2a; /* Slightly lighter background for item cards */
+    border-radius: 8px;     /* Rounded corners for card-like appearance */
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* Styles for the images within each gallery item */
+.gallery-item img {
+    display: block;         /* Remove extra space below the image */
+    width: auto;            /* Let the image determine its natural width */
+    height: auto;           /* Let the image determine its natural height */
+    max-width: 110px;       /* Crucial: Set a slightly higher max-width than the problematic threshold */
+    max-height: 65px;       /* Crucial: Set a slightly higher max-height than the problematic threshold */
+    object-fit: contain;    /* Ensure the whole image is visible and aspect ratio is maintained */
+    margin-bottom: 8px;     /* Space between the image and its name */
+    border: 1px solid #444; /* Darker border for contrast on dark background */
+    padding: 5px;           /* Padding inside the border */
+    background-color: #3a3a3a; /* Even lighter background for the image area */
+    border-radius: 4px;     /* Slightly rounded corners for the images */
+}
+
+/* Styles for the image names */
+.image-name {
+    font-size: 0.85em;      /* Adjust font size for the name */
+    color: #e0e0e0;         /* Light grey text */
+    margin: 0;              /* Remove default margin */
+    word-break: break-word; /* Break long words to prevent overflow */
+}
+
+/* Custom link color for better readability on dark background */
+a {
+    color: #64b5f6; /* A bright, light blue that stands out */
+    text-decoration: none; /* Optional: remove underline */
+}
+
+a:hover {
+    color: #90caf9; /* Slightly lighter blue on hover */
+    text-decoration: underline; /* Optional: add underline on hover for clarity */
+}
